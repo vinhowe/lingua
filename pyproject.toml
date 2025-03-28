@@ -1,0 +1,21 @@
+[project]
+name = "lingua"
+version = "0.0.0"
+dependencies = [
+    "numpy",
+    "omegaconf",
+    "msgspec",
+    "rouge-score",
+    "sacrebleu",
+    "sentencepiece",
+    "tiktoken",
+    "fsspec",
+    "blobfile",
+    "wandb",
+    "viztracer",
+    "lm-eval",
+    "scipy",
+    "pynvml",
+    "datatrove",
+    "orjson",
+] 
