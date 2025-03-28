@@ -32,3 +32,6 @@ torch = { index = "pytorch" }
 name = "pytorch"
 url = "https://download.pytorch.org/whl/cu121"
 explicit = true
+
+[tool.uv]
+constraint-dependencies = ["evaluate>=0.4.3", "datasets>=3.5.0"]
