@@ -17,7 +17,7 @@ dependencies = [
     "blobfile",
     "wandb",
     "viztracer",
-    "lm-eval>=0.4.8",
+    "lm-eval",
     "scipy",
     "pynvml",
     "datatrove",
@@ -27,6 +27,8 @@ dependencies = [
 [tool.uv.sources]
 xformers = { index = "pytorch" }
 torch = { index = "pytorch" }
+# Waiting on a fix for a typo
+lm-eval = { git = "https://github.com/EleutherAI/lm-evaluation-harness.git" }
 
 [[tool.uv.index]]
 name = "pytorch"
