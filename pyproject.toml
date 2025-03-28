@@ -2,6 +2,8 @@
 name = "lingua"
 version = "0.0.0"
 dependencies = [
+    "ninja",
+    "torch==2.5.0",
     "numpy",
     "omegaconf",
     "msgspec",
@@ -19,3 +21,12 @@ dependencies = [
     "datatrove",
     "orjson",
 ] 
+
+[tool.uv.sources]
+xformers = { index = "pytorch" }
+torch = { index = "pytorch" }
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu121"
+explicit = true
