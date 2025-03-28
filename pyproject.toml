@@ -22,7 +22,7 @@ dependencies = [
     "pynvml",
     "datatrove",
     "orjson",
-] 
+]
 
 [tool.uv.sources]
 xformers = { index = "pytorch" }
