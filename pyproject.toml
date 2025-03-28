@@ -17,7 +17,7 @@ dependencies = [
     "blobfile",
     "wandb",
     "viztracer",
-    "lm-eval",
+    "lm-eval>=0.4.8",
     "scipy",
     "pynvml",
     "datatrove",
@@ -32,6 +32,3 @@ torch = { index = "pytorch" }
 name = "pytorch"
 url = "https://download.pytorch.org/whl/cu121"
 explicit = true
-
-[tool.uv]
-constraint-dependencies = ["evaluate>=0.4.3", "datasets>=3.5.0"]
