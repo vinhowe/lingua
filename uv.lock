@@ -10,12 +10,6 @@ resolution-markers = [
     "python_full_version < '3.11' and sys_platform != 'linux'",
 ]
 
-[manifest]
-constraints = [
-    { name = "datasets", specifier = ">=3.5.0" },
-    { name = "evaluate", specifier = ">=0.4.3" },
-]
-
 [[package]]
 name = "absl-py"
 version = "2.2.1"
@@ -615,7 +609,7 @@ requires-dist = [
     { name = "blobfile" },
     { name = "datatrove" },
     { name = "fsspec" },
-    { name = "lm-eval" },
+    { name = "lm-eval", git = "https://github.com/EleutherAI/lm-evaluation-harness.git" },
     { name = "msgspec" },
     { name = "ninja" },
     { name = "numpy" },
@@ -635,13 +629,15 @@ requires-dist = [
 
 [[package]]
 name = "lm-eval"
-version = "0.4.0"
-source = { registry = "https://pypi.org/simple" }
+version = "0.4.8"
+source = { git = "https://github.com/EleutherAI/lm-evaluation-harness.git#3cb721486c053a3f8616b6445c6230c66461e03f" }
 dependencies = [
     { name = "accelerate" },
     { name = "datasets" },
+    { name = "dill" },
     { name = "evaluate" },
     { name = "jsonlines" },
+    { name = "more-itertools" },
     { name = "numexpr" },
     { name = "peft" },
     { name = "pybind11" },
@@ -653,9 +649,9 @@ dependencies = [
     { name = "torch" },
     { name = "tqdm-multiprocess" },
     { name = "transformers" },
+    { name = "word2number" },
     { name = "zstandard" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/45/e0/05001c2e56e2f8f793189442176432ddb89a2f1f1ef00ea154d0bc00fe37/lm_eval-0.4.0.tar.gz", hash = "sha256:2dac56039b191c2dfb0011329ec9082e474006a15575db45468b88753923b34b", size = 457131 }
 
 [[package]]
 name = "loguru"
@@ -820,6 +816,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/31/ab/05ae008357c8bdb6245ebf8a101d99f26c096e0ea20800b318153da23796/mbstrdecoder-1.1.4.tar.gz", hash = "sha256:8105ef9cf6b7d7d69fe7fd6b68a2d8f281ca9b365d7a9b670be376b2e6c81b21", size = 14527 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/30/ac/5ce64a1d4cce00390beab88622a290420401f1cabf05caf2fc0995157c21/mbstrdecoder-1.1.4-py3-none-any.whl", hash = "sha256:03dae4ec50ec0d2ff4743e63fdbd5e0022815857494d35224b60775d3d934a8c", size = 7933 },
+]
+
+[[package]]
+name = "more-itertools"
+version = "10.6.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/88/3b/7fa1fe835e2e93fd6d7b52b2f95ae810cf5ba133e1845f726f5a992d62c2/more-itertools-10.6.0.tar.gz", hash = "sha256:2cd7fad1009c31cc9fb6a035108509e6547547a7a738374f10bd49a09eb3ee3b", size = 125009 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/23/62/0fe302c6d1be1c777cab0616e6302478251dfbf9055ad426f5d0def75c89/more_itertools-10.6.0-py3-none-any.whl", hash = "sha256:6eb054cb4b6db1473f6e15fcc676a08e4732548acd47c708f0e179c2c7c01e89", size = 63038 },
 ]
 
 [[package]]
@@ -2560,6 +2565,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/b3/8f/705086c9d734d3b66
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e1/07/c6fe3ad3e685340704d314d765b7912993bcb8dc198f0e7a89382d37974b/win32_setctime-1.2.0-py3-none-any.whl", hash = "sha256:95d644c4e708aba81dc3704a116d8cbc974d70b3bdb8be1d150e36be6e9d1390", size = 4083 },
 ]
+
+[[package]]
+name = "word2number"
+version = "1.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/4a/29/a31940c848521f0725f0df6b25dca8917f13a2025b0e8fcbe5d0457e45e6/word2number-1.1.zip", hash = "sha256:70e27a5d387f67b04c71fbb7621c05930b19bfd26efd6851e6e0f9969dcde7d0", size = 9723 }
 
 [[package]]
 name = "xformers"
