@@ -5,6 +5,7 @@ requires-python = ">=3.10"
 dependencies = [
     "ninja",
     "torch==2.5.0",
+    "xformers",
     "numpy",
     "omegaconf",
     "msgspec",
